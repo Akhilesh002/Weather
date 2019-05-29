@@ -259,6 +259,12 @@
                     android:textColor="@android:color/white"
                     android:textSize="20sp"/>
 
+                <View
+                    android:id="@+id/fifth_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -281,6 +287,12 @@
                     android:layout_marginRight="0dp"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"/>
+
+                <View
+                    android:id="@+id/sixth_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -305,6 +317,12 @@
                     android:textColor="@android:color/white"
                     android:textSize="20sp"/>
 
+                <View
+                    android:id="@+id/seventh_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -327,6 +345,12 @@
                     android:layout_marginRight="0dp"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"/>
+
+                <View
+                    android:id="@+id/eighth_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -351,6 +375,12 @@
                     android:textColor="@android:color/white"
                     android:textSize="20sp"/>
 
+                <View
+                    android:id="@+id/ninth_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -373,6 +403,12 @@
                     android:layout_marginRight="0dp"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"/>
+
+                <View
+                    android:id="@+id/tenth_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
             </LinearLayout>
 
 

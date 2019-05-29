@@ -178,17 +178,6 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
     }
 
-    private ArrayList<PerDayTemperature> populateDays() {
-        ArrayList<PerDayTemperature> list =  new ArrayList<>();
-
-        for (int i = 0; i < 7; i++){
-            PerDayTemperature perDayTemperature = new PerDayTemperature();
-            perDayTemperature.setDay(days[i]);
-            list.add(perDayTemperature);
-        }
-        return list;
-    }
-
     private ArrayList<Weather> populateWeather() {
         ArrayList<Weather> list = new ArrayList<>();
 
@@ -196,6 +185,17 @@ public class MainActivity extends AppCompatActivity {
             Weather weather = new Weather();
             weather.setName(hour[i]);
             list.add(weather);
+        }
+        return list;
+    }
+
+    private ArrayList<PerDayTemperature> populateDays() {
+        ArrayList<PerDayTemperature> list =  new ArrayList<>();
+
+        for (int i = 0; i < 7; i++){
+            PerDayTemperature perDayTemperature = new PerDayTemperature();
+            perDayTemperature.setDay(days[i]);
+            list.add(perDayTemperature);
         }
         return list;
     }
