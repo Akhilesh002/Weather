@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -37,6 +38,7 @@ import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ConstraintLayout parentConstraintLayout;
     private TextView cityName;
     private TextView cityTemperature;
     private TextView day;
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        parentConstraintLayout = findViewById(R.id.parent_layout);
         cityName = findViewById(R.id.city_name);
         cityTemperature = findViewById(R.id.city_temperature);
         day = findViewById(R.id.day);
@@ -141,6 +144,23 @@ public class MainActivity extends AppCompatActivity {
                                 double currentTemperature;
                                 currentTemperature = ((((Double.parseDouble(mainObject.getString("temp")) - 273.15) * 9) / 5) + 32);
                                 cityTemperature.setText(new DecimalFormat("##.##").format(currentTemperature));
+                                float ct = Float.parseFloat(new DecimalFormat("##.##").format(currentTemperature));
+
+                                if(ct > 99 && ct <= 100){
+                                    parentConstraintLayout.setBackgroundColor(0x99000099);
+                                }else if (ct > 98 && ct <= 99){
+                                    parentConstraintLayout.setBackgroundColor(0x88000088);
+                                }else if(ct > 97 && ct <= 98){
+                                    parentConstraintLayout.setBackgroundColor(0x77000077);
+                                }else if(ct > 96 && ct <= 97){
+                                    parentConstraintLayout.setBackgroundColor(0x66000066);
+                                }else if(ct > 95 && ct <= 96){
+                                    parentConstraintLayout.setBackgroundColor(0x55000055);
+                                }else if(ct > 94 && ct <= 95){
+                                    parentConstraintLayout.setBackgroundColor(0x44000044);
+                                }else{
+                                    parentConstraintLayout.setBackgroundColor(0x55555555);
+                                }
                                 double tempMax = ((((Double.parseDouble(mainObject.getString("temp_max")) - 273.15) * 9) / 5) + 32);
                                 maximumTemperature.setText(new DecimalFormat("##.##").format(tempMax));
                                 double tempMin = ((((Double.parseDouble(mainObject.getString("temp_min")) - 273.15) * 9) / 5) + 32);
@@ -201,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getDay(long time) {
-        Calendar cal = Calendar.getInstance();
+//        Calendar cal = Calendar.getInstance();
         TimeZone tz = TimeZone.getDefault();//get your local time zone.
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         sdf.setTimeZone(tz);//set time zone.
