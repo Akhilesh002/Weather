@@ -146,20 +146,22 @@ public class MainActivity extends AppCompatActivity {
                                 cityTemperature.setText(new DecimalFormat("##.##").format(currentTemperature));
                                 float ct = Float.parseFloat(new DecimalFormat("##.##").format(currentTemperature));
 
-                                if(ct > 99 && ct <= 100){
+                                if (ct > 100){
+                                    parentConstraintLayout.setBackgroundResource(R.drawable.background_2);
+                                }else if(ct > 99 && ct <= 100){
                                     parentConstraintLayout.setBackgroundColor(0x99000099);
                                 }else if (ct > 98 && ct <= 99){
                                     parentConstraintLayout.setBackgroundColor(0x88000088);
                                 }else if(ct > 97 && ct <= 98){
                                     parentConstraintLayout.setBackgroundColor(0x77000077);
                                 }else if(ct > 96 && ct <= 97){
-                                    parentConstraintLayout.setBackgroundColor(0x66000066);
+                                    parentConstraintLayout.setBackgroundColor(0xAA000066);
                                 }else if(ct > 95 && ct <= 96){
                                     parentConstraintLayout.setBackgroundColor(0x55000055);
                                 }else if(ct > 94 && ct <= 95){
                                     parentConstraintLayout.setBackgroundColor(0x44000044);
                                 }else{
-                                    parentConstraintLayout.setBackgroundColor(0x55555555);
+                                    parentConstraintLayout.setBackgroundResource(R.drawable.background_1);
                                 }
                                 double tempMax = ((((Double.parseDouble(mainObject.getString("temp_max")) - 273.15) * 9) / 5) + 32);
                                 maximumTemperature.setText(new DecimalFormat("##.##").format(tempMax));

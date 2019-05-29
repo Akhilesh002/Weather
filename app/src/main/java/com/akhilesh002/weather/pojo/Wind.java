@@ -10,7 +10,7 @@ public class Wind {
     private Float speed;
     @SerializedName("deg")
     @Expose
-    private Integer deg;
+    private Float deg;
 
     /**
      * No args constructor for use in serialization
@@ -24,7 +24,7 @@ public class Wind {
      * @param speed
      * @param deg
      */
-    public Wind(Float speed, Integer deg) {
+    public Wind(Float speed, Float deg) {
         super();
         this.speed = speed;
         this.deg = deg;
@@ -38,11 +38,11 @@ public class Wind {
         this.speed = speed;
     }
 
-    public Integer getDeg() {
+    public Float getDeg() {
         return deg;
     }
 
-    public void setDeg(Integer deg) {
+    public void setDeg(Float deg) {
         this.deg = deg;
     }
 

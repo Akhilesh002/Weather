@@ -16,18 +16,17 @@
         android:layout_marginRight="8dp"
         android:text="@string/hour"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/hour_temperature_image"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +47,6 @@
         app:layout_constraintTop_toBottomOf="@+id/hour_temperature_image"
         android:text="@string/temperature"
         android:textColor="@android:color/black"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
 </android.support.constraint.ConstraintLayout>
